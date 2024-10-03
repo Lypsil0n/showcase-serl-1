@@ -48,7 +48,6 @@ export default function List() {
   if (filteredProjects.length === 0) {
     return <div>
             <p className="filterBox">
-              Filter: 
               <input
                 type="text"
                 value={filter}
@@ -64,7 +63,6 @@ export default function List() {
   return (
     <div>
       <p className="filterBox">
-        Filter: 
         <input
           type="text"
           value={filter}
