@@ -68,7 +68,7 @@ export default function List() {
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
           className="ml-2 p-2 border border-gray-300 rounded"
-          placeholder="Search projects..."
+          placeholder="Search projects:"
         />
       </p>
       <p className="my-4">{filteredProjects.length} entries found.</p>
@@ -84,14 +84,17 @@ export default function List() {
         {filteredProjects.map((project) => (
           <div 
             key={project.id} 
-            className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col p-6 h-100" // Set card height
+            className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col p-6 h-full" // Set card height
+            style={{ minHeight: '300px' }} // Minimum height for uniformity
           >
             <h2 className="text-xl font-bold mb-2">
               <Link href={`/projects/${project.id}`}>
                 {project.title}
               </Link>
             </h2>
-            <p className="text-gray-600 flex-grow">{project.smallDesc}</p>
+            <p className="text-gray-600 flex-grow overflow-hidden text-ellipsis line-clamp-3">
+              {project.smallDesc}
+            </p>
             <p className="text-sm text-gray-500 mt-1">Type: {project.type}</p>
             <p className="text-sm text-gray-500">Tags: {project.tags.join(", ")}</p>
             <p className="text-blue-500 mt-2">
@@ -101,11 +104,11 @@ export default function List() {
             </p>
             
             {project.screenshots.length > 0 && (
-              <div className="mt-4 h-48 flex justify-center"> {/* Center the image horizontally */}
+              <div className="mt-4 h-48 flex justify-center">
                 <img
                   src={project.screenshots[0]}
                   alt="Screenshot 1"
-                  className="h-full max-w-full object-cover rounded-md" // Maintain aspect ratio and max width
+                  className="h-full w-auto max-w-full object-cover rounded-md" // Maintain aspect ratio and max width
                 />
               </div>
             )}

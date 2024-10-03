@@ -12,7 +12,7 @@ export default function Overview() {
     
     if (storedProjects) {
       const parsedProjects = JSON.parse(storedProjects);
-      setProjects(parsedProjects.slice(-2)); 
+      setProjects(parsedProjects.slice(-4)); 
     }
   };
 
@@ -31,38 +31,42 @@ export default function Overview() {
   }
 
   return (
-    <div>
-      {/* Render the last two projects */}
-      {projects.length > 0 ? (
-        projects.map((project) => (
-          <div key={project.id} style={{ marginBottom: "30px" }}>
-            <h2>
+    <div className="flex justify-center mt-8"> {/* Center the grid container */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {projects.map((project) => (
+          <div 
+            key={project.id} 
+            className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col p-6 h-full" // Set card height
+            style={{ minHeight: '300px' }} // Minimum height for uniformity
+          >
+            <h2 className="text-xl font-bold mb-2">
               <Link href={`/projects/${project.id}`}>
                 {project.title}
               </Link>
             </h2>
-            <p>{project.smallDesc}</p>
-            <p>Type: {project.type}</p>
-            <p>Tags: {project.tags.join(", ")}</p>
-            <p className="link">
+            <p className="text-gray-600 flex-grow overflow-hidden text-ellipsis line-clamp-3">
+              {project.smallDesc}
+            </p>
+            <p className="text-sm text-gray-500 mt-1">Type: {project.type}</p>
+            <p className="text-sm text-gray-500">Tags: {project.tags.join(", ")}</p>
+            <p className="text-blue-500 mt-2">
               <a href={project.url} target="_blank" rel="noopener noreferrer">
                 Visit Homepage
               </a>
             </p>
-            <div className="screenshotList">
-              {project.screenshots.length > 0 && (
+            
+            {project.screenshots.length > 0 && (
+              <div className="mt-4 h-48 flex justify-center">
                 <img
                   src={project.screenshots[0]}
                   alt="Screenshot 1"
-                  style={{ maxWidth: "300px", height: "auto" }}
+                  className="h-full w-auto max-w-full object-cover rounded-md" // Maintain aspect ratio and max width
                 />
-              )}
-            </div>
+              </div>
+            )}
           </div>
-        ))
-      ) : (
-        <p>No projects found.</p>
-      )}
+        ))}
+      </div>
     </div>
   );
-}
+}  
