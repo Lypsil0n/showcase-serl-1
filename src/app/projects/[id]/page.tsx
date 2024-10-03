@@ -6,7 +6,7 @@ const QRCode = dynamic(() => import('qrcode.react').then(mod => mod.QRCodeSVG), 
 
 // function to fetch project data from JSON using fs
 async function getProjectData(id: string): Promise<Project | null> {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'projects.json');
+  const filePath = path.join(process.cwd(), 'public', 'data', 'projects_real.json');
   const jsonData = fs.readFileSync(filePath, 'utf8');
   const projects: Project[] = JSON.parse(jsonData);
   return projects.find((project) => project.id === id) || null;
@@ -14,7 +14,7 @@ async function getProjectData(id: string): Promise<Project | null> {
 
 // generate static params for dynamic routes
 export async function generateStaticParams() {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'projects.json');
+  const filePath = path.join(process.cwd(), 'public', 'data', 'projects_real.json');
   const jsonData = fs.readFileSync(filePath, 'utf8');
   const projects: Project[] = JSON.parse(jsonData);
   

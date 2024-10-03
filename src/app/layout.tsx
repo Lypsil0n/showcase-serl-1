@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const response = await fetch('/data/projects.json');
+      const response = await fetch('/data/projects_real.json');
       
       const data = await response.json();
       setProjects(data); // Update state with projects
