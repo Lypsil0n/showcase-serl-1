@@ -4,7 +4,6 @@ import './globals.css';
 import Header from './components/header';
 import Footer from './components/footer'
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [,setProjects] = useState<any[]>([]);
