@@ -2,10 +2,10 @@
     {
         "id": "screenpipe",
         "title": "Screenpipe",
-        "smallDesc": "24/7 local AI screen & mic recording. Build AI apps that have the full context. Works with Ollama. Alternative to Rewind.ai. Open. Secure. You own your data. Rust.",
+        "smallDesc": "24/7 local AI screen & mic recording. Build AI apps that have the full context. Works with Ollama. Alternative to Rewind.ai. Open. Secure.",
         "longDesc": "Screenpipe is an open-source library that records your screen & mic 24/7 and connects it to LLMs. It's designed for gathering life context and easily connecting it to AI for search, automation, and more. Screenpipe captures screenshots, records audio, performs OCR, and speech-to-text. It stores data locally in a SQLite database and as mp4 files. You can then query this data through an API and pipe it into LLMs for various applications.",
         "tags": ["AI", "audio recording", "video recording", "Rust"],
-        "screenshots": ["https://screenpi.pe/1024x1024.png"],
+        "screenshots": ["https://screenpi.pe/1024x1024.png", "https://raw.githubusercontent.com/mediar-ai/screenpipe/refs/heads/main/content/diagram2.png"],
         "url": "https://screenpi.pe",
         "type": "Student project"
     },
@@ -15,7 +15,7 @@
         "smallDesc": "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface.",
         "longDesc": "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Godot Foundation not-for-profit.Before being open sourced in February 2014, Godot had been developed by Juan Linietsky and Ariel Manzur (both still maintaining the project) for several years as an in-house engine, used to publish several work-for-hire titles.",
         "tags": ["video games", "engine", "C++"],
-        "screenshots": ["https://godotengine.org/assets/press/icon_color.png"], 
+        "screenshots": ["https://godotengine.org/assets/press/icon_color.png", "https://raw.githubusercontent.com/godotengine/godot-design/master/screenshots/editor_tps_demo_1920x1080.jpg"], 
         "url": "https://godotengine.org",
         "type": "Student project"
     },
@@ -25,7 +25,7 @@
         "smallDesc": "Low-code platform for building business applications. Connect to databases, cloud storages, GraphQL, API endpoints, Airtable, Google sheets, OpenAI, etc and build apps using drag and drop application builder.",
         "longDesc": "ToolJet is an open-source low-code framework to build and deploy internal tools with minimal engineering effort. ToolJet's drag-and-drop frontend builder allows you to create complex, responsive frontends within minutes. Additionally, you can integrate various data sources, including databases like PostgreSQL, MongoDB, and Elasticsearch; API endpoints with OpenAPI spec and OAuth2 support; SaaS tools such as Stripe, Slack, Google Sheets, Airtable, and Notion; as well as object storage services like S3, GCS, and Minio, to fetch and write data.",
         "tags": ["framework", "API", "JavaScript"],
-        "screenshots": ["https://avatars.githubusercontent.com/u/82193554?v=4"], 
+        "screenshots": ["https://avatars.githubusercontent.com/u/82193554?v=4", "https://user-images.githubusercontent.com/7828962/211444352-4d6d2e4a-13c9-4980-9e16-4aed4af9811b.png"], 
         "url": "https://www.tooljet.com",
         "type": "Research project"
     },
@@ -33,9 +33,9 @@
         "id": "continue",
         "title": "Continue",
         "smallDesc": "Continue is the leading open-source AI code assistant. You can connect any models and any context to build custom autocomplete and chat experiences inside VS Code and JetBrains.",
-        "longDesc": "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Godot Foundation not-for-profit.Before being open sourced in February 2014, Godot had been developed by Juan Linietsky and Ariel Manzur (both still maintaining the project) for several years as an in-house engine, used to publish several work-for-hire titles.",
+        "longDesc": "Continue is the leading open-source AI code assistant inside of VS Code and JetBrains. It offers functions such as Chat to understand and iterate on code in the sidebar, Autocomplete to recieve inline code suggestions as you type, Edit to modify code without leaving your current file and Actions to establish shortcuts for common use cases.",
         "tags": ["AI", "coding assistance", "TypeScript"],
-        "screenshots": ["https://docs.continue.dev/img/logo.png"], 
+        "screenshots": ["https://docs.continue.dev/img/logo.png", "https://noted.lol/content/images/2023/10/continue-coding-chat-ai-noted.lol-2.png"], 
         "url": "https://www.continue.dev",
         "type": "Research project"
     },
@@ -43,9 +43,9 @@
         "id": "dicedb",
         "title": "DiceDB",
         "smallDesc": "DiceDB is an in-memory, real-time, and reactive database with Redis and SQL support optimized for modern hardware and building real-time applications.",
-        "longDesc": "Godot is completely free and open source under the very permissive MIT license. No strings attached, no royalties, nothing. The users' games are theirs, down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine to match their expectations. It is supported by the Godot Foundation not-for-profit.Before being open sourced in February 2014, Godot had been developed by Juan Linietsky and Ariel Manzur (both still maintaining the project) for several years as an in-house engine, used to publish several work-for-hire titles.",
+        "longDesc": "DiceDB is an in-memory, real-time, and reactive database with Redis and SQL support optimized for modern hardware and building real-time applications. Although DiceDB is a drop-in replacement of Redis, which means almost no learning curve and switching does not require any code change, it still differs in two key aspects and they are that DiceDB is multithreaded and follows shared-nothing architecture and that DiceDB supports a new command called QWATCH that lets clients listen to a SQL query and get notified in real-time whenever something changes.",
         "tags": ["database", "SQL", "Go"],
-        "screenshots": ["https://dicedb.io/icon.png"], 
+        "screenshots": ["https://dicedb.io/icon.png", "https://opengraph.githubassets.com/f5837c2216a3655c96f17ab2ae99a9c3c40caf985e4262de67345ec04ac5c957/DiceDB/dice"], 
         "url": "https://dicedb.io",
         "type": "Student project"
     },
@@ -55,7 +55,7 @@
         "smallDesc": "Orchestration and automation platform to execute millions of scheduled and event-driven workflows declaratively in code and from the UI.",
         "longDesc": "Kestra is an open-source, event-driven orchestration platform that makes both scheduled and event-driven workflows easy. By bringing Infrastructure as Code best practices to data, process, and microservice orchestration, you can build reliable workflows directly from the UI in just a few lines of YAML. The YAML definition gets automatically adjusted any time you make changes to a workflow from the UI or via an API call. Therefore, the orchestration logic is always managed declaratively in code, even if you modify your workflows in other ways (UI, CI/CD, Terraform, API calls).",
         "tags": ["workflow", "SQL", "Java"],
-        "screenshots": ["https://media.dev.to/cdn-cgi/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F5283%2F8d138075-5a4a-47cb-a1e2-c123d4f70af0.png"], 
+        "screenshots": ["https://media.dev.to/cdn-cgi/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F5283%2F8d138075-5a4a-47cb-a1e2-c123d4f70af0.png", "https://techcrunch.com/wp-content/uploads/2023/10/Kestra-flow.png"], 
         "url": "https://kestra.io",
         "type": "Student project"
     }

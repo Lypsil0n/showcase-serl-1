@@ -2,14 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function List() {
   const [projects, setProjects] = useState<any[]>([]);
   const [filter, setFilter] = useState("");
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   const fetchProjectsFromLocalStorage = () => {
-    const storedProjects = localStorage.getItem('filteredProjects');
+    const storedProjects = localStorage.getItem('allProjects');
     
     if (storedProjects) {
       setProjects(JSON.parse(storedProjects));
@@ -23,7 +25,7 @@ export default function List() {
     fetchProjectsFromLocalStorage();
     setLoading(false);
 
-    const intervalId = setInterval(fetchProjectsFromLocalStorage, 5000);
+    const intervalId = setInterval(fetchProjectsFromLocalStorage, 10000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -39,6 +41,7 @@ export default function List() {
 
   const goToKiosk = () => {
     localStorage.setItem('filteredProjects', JSON.stringify(filteredProjects));
+    router.push('/kiosk');
   };
 
   if (loading) {
@@ -67,19 +70,20 @@ export default function List() {
           type="text"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="ml-2 p-2 border border-gray-300 rounded"
+          className="ml-2 p-2 border bg-gray-100 rounded"
           placeholder="Search projects:"
         />
       </p>
-      <p className="my-4">{filteredProjects.length} entries found.</p>
       
-      <button className="kioskButton bg-blue-500 text-white px-4 py-2 rounded mt-4">
-        <Link href="/kiosk">
+      <button
+          className="kioskButton text-white px-4 py-2 rounded mt-4 ml-2" // Added ml-4 for left margin
+          onClick={goToKiosk}
+        >
           Enter Kiosk Mode with applied filter
-        </Link>
       </button>
+
+      <p className="my-4">{filteredProjects.length} entries found.</p>
   
-      {/* Render filtered project list as cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
         {filteredProjects.map((project) => (
           <div 

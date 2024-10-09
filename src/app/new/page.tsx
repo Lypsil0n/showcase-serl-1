@@ -8,7 +8,7 @@ export default function Overview() {
   const [loading, setLoading] = useState(true);
 
   const fetchProjectsFromLocalStorage = () => {
-    const storedProjects = localStorage.getItem('filteredProjects');
+    const storedProjects = localStorage.getItem('allProjects');
     
     if (storedProjects) {
       const parsedProjects = JSON.parse(storedProjects);
@@ -31,7 +31,9 @@ export default function Overview() {
   }
 
   return (
-    <div className="flex justify-center mt-8"> {/* Center the grid container */}
+    <div>
+      <p>These are the latest projects added to the repository.</p>
+       <div className="flex justify-center mt-8"> {/* Center the grid container */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {projects.map((project) => (
           <div 
@@ -67,6 +69,7 @@ export default function Overview() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }  
