@@ -25,7 +25,7 @@ export default function List() {
     fetchProjectsFromLocalStorage();
     setLoading(false);
 
-    const intervalId = setInterval(fetchProjectsFromLocalStorage, 10000);
+    const intervalId = setInterval(fetchProjectsFromLocalStorage, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -48,39 +48,40 @@ export default function List() {
     return <div className="spinner"></div>;
   }
 
-  if (filteredProjects.length === 0) {
+  if (filteredProjects.length === 0) 
+  {
     return <div>
-            <p className="filterBox">
-              <input
-                type="text"
-                value={filter}
-                onChange={(e) => setFilter(e.target.value)}
-                className="ml-2 p-2 border border-gray-300 rounded"
-                placeholder="Search projects..."
-              />
-            </p>
-            <p>No projects match the search query.</p>
-          </div>
-  }
-
-  return (
-    <div>
-      <p className="filterBox">
+      <div className="flex items-center space-x-4 ml-2">
         <input
           type="text"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="ml-2 p-2 border bg-gray-100 rounded"
+          className="p-2 border border-gray-300 rounded bg-gray-100"
           placeholder="Search projects:"
         />
-      </p>
-      
-      <button
-          className="kioskButton text-white px-4 py-2 rounded mt-4 ml-2" // Added ml-4 for left margin
+          </div>
+            <p className="my-4">No projects match the search query.</p>
+        </div>
+  }
+
+  return (
+    <div>
+      <div className="flex items-center space-x-4 ml-2">
+        <input
+          type="text"
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="p-2 border border-gray-300 rounded bg-gray-100"
+          placeholder="Search projects:"
+        />
+
+        <button
           onClick={goToKiosk}
+          className="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-400"
         >
           Enter Kiosk Mode with applied filter
-      </button>
+        </button>
+      </div>
 
       <p className="my-4">{filteredProjects.length} entries found.</p>
   
@@ -119,6 +120,7 @@ export default function List() {
           </div>
         ))}
       </div>
+      <br></br>
     </div>
   );
 }  

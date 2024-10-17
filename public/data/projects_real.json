@@ -2,10 +2,10 @@
     {
         "id": "screenpipe",
         "title": "Screenpipe",
-        "smallDesc": "24/7 local AI screen & mic recording. Build AI apps that have the full context. Works with Ollama. Alternative to Rewind.ai. Open. Secure.",
+        "smallDesc": "24/7 local AI screen & mic recording. Build AI apps that have the full context. Works with Ollama. Alternative to Rewind.ai. Open. Secure. You own your data.",
         "longDesc": "Screenpipe is an open-source library that records your screen & mic 24/7 and connects it to LLMs. It's designed for gathering life context and easily connecting it to AI for search, automation, and more. Screenpipe captures screenshots, records audio, performs OCR, and speech-to-text. It stores data locally in a SQLite database and as mp4 files. You can then query this data through an API and pipe it into LLMs for various applications.",
         "tags": ["AI", "audio recording", "video recording", "Rust"],
-        "screenshots": ["https://screenpi.pe/1024x1024.png", "https://raw.githubusercontent.com/mediar-ai/screenpipe/refs/heads/main/content/diagram2.png"],
+        "screenshots": ["https://screenpi.pe/1024x1024.png", "https://opengraph.githubassets.com/78f5534e5e39cbdb484913b3404aba06cc8de55c01022f557c2af0dd21ef0ae0/mediar-ai/screenpipe"],
         "url": "https://screenpi.pe",
         "type": "Student project"
     },

@@ -4,8 +4,10 @@ import './globals.css';
 import Header from './components/header';
 import Footer from './components/footer'
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
   const [,setProjects] = useState<any[]>([]);
 
   useEffect(() => {
@@ -20,18 +22,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     };
 
     fetchProjects();
-    const intervalId = setInterval(fetchProjects, 60000);
+    const intervalId = setInterval(fetchProjects, 5000);
 
     // Cleanup interval on unmount
     return () => clearInterval(intervalId);
   }, []);
 
+  const isKioskRoute = pathname.startsWith('/kiosk');
+
   return (
     <html lang="en">
       <title>ShowcaseSERL</title>
       <body className="flex flex-col min-h-screen"> {/* Use flexbox and min-height */}
-        <h1 style={headingStyle}>ShowcaseSERL</h1>
-        <Header />
+        {!isKioskRoute && (
+          <>
+          <h1 style={headingStyle}>ShowcaseSERL</h1>
+          <Header />
+          </>
+        )}
         <br></br>
         <main className="flex-grow"> {/* Allow the main content to grow */}
           {children}

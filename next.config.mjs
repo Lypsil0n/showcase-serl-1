@@ -5,4 +5,8 @@ const nextConfig = {
   basePath: nextBasePath,
 }
 
+export const images = {
+  domains: ['raw.githubusercontent.com'],
+}
+
 export default nextConfig

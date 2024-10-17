@@ -34,12 +34,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
     <div className="bg-gray-100 min-h-screen">
 
     <div className="bg-white p-8 rounded-lg shadow-lg w-[1100px] h-[950px] mx-auto mt-8 flex flex-col justify-between">
-
-      <h2 className="text-2xl font-bold mb-4">
-        <a href={currentProject.url} target="_blank" rel="noopener noreferrer">
-          {currentProject.title}
-        </a>
-      </h2>
+      <h2 className="text-2xl font-bold mb-4">{currentProject.title}</h2>
 
       <div className="screenshots flex flex-wrap justify-center gap-4 mb-4">
         {currentProject.screenshots.slice(1).map((url: string, index: number) => (
@@ -55,6 +50,8 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
       <p className="text-gray-700 mb-2">{currentProject.longDesc}</p>
       <p className="text-gray-500 mb-2">Type: {currentProject.type}</p>
       <p className="text-gray-500 mb-4">Tags: {currentProject.tags.join(', ')}</p>
+
+      
 
       <div className="qrCode flex justify-left pt-14">
         <QRCode value={qrValue} size={150} />
