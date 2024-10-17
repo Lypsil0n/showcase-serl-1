@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import dynamic from 'next/dynamic';
+import { Project }from '../../types/types';
 
 const QRCode = dynamic(() => import('qrcode.react').then(mod => mod.QRCodeSVG), { ssr: false });
 
