@@ -23,6 +23,7 @@ const KioskPage = ({ params }: { params: { id: string } }) => {
           setCurrentProject(foundProject); // Set the project data in state
           // Construct the URL for QR code using window.location
           const projectUrl = `${window.location.origin}/projects/${foundProject.id}`;
+          console.log('Project URL:', projectUrl);
           setQrValue(projectUrl); // Set the QR value
         } else {
           setError('Project not found'); // Set error if project not found
