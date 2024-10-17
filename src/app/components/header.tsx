@@ -1,4 +1,3 @@
-// src/app/components/Header.tsx
 import React from 'react';
 import Link from 'next/link';
 
@@ -8,7 +7,6 @@ const Header: React.FC = () => {
       <nav>
         <ul className='nav-list'>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/new">New Projects</Link></li>
           <li><Link href="/list">Project List</Link></li>
           <li><Link href="/about">About</Link></li>
         </ul>

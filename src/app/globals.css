@@ -12,173 +12,178 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    @apply bg-gray-100
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer {
+    margin-bottom: auto;
+  } 
+  
+  @layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
   }
 }
 
-div {
-  color: black;
-  font-family: 'Trebuchet MS'
-}
-
-h1 {
-  font-family: 'Trebuchet MS';
-  font-size: 50px;
-  background-color: aqua;
-  padding-left: 0.5%;
-}
-
-h2 {
-  text-align: center;
-  font-size: 25px;
-}
-
-p {
-  text-align: center;
-  font-size: 18px;
-}
-
-.spinner {
-  border: 8px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #09f;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  margin: 100px auto;
-}
-
-.filterBox {
-  margin: auto;
-  margin-bottom: 20px;
-}
-
-input {
-  outline: auto;
-}
-
-.header {
-  background-color: aqua;
-  color: white;
-  text-align: center;
-}
-
-.nav-list {
-  font-family: 'Trebuchet MS';
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.nav-list li {
-  margin: 0;
-}
-
-.nav-list a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-list a:hover {
-  text-decoration: underline;
-}
-
-.project-display h2 {
-  font-family: 'Trebuchet MS';
-  font-size: 2rem;
-  color: #333; 
-  margin-bottom: 10px; 
-  text-align: center;
-}
-
-.project-display p {
-  font-family: 'Trebuchet MS';
-  font-size: 1.5rem; 
-  color: #666; 
-  line-height: 1.5; 
-  margin-bottom: 15px; 
-  text-align: center; 
-}
-
-.project-display p.long-desc {
-  font-family: 'Trebuchet MS';
-  font-size: 0.9rem; 
-  color: #444; 
-  white-space: pre-wrap; 
-  overflow-wrap: break-word; 
-}
-
-.screenshots {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; 
-  justify-content: center;
-  align-items: center;
-}
-
-.screenshotList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; 
-  justify-content: center;
-  align-items: center;
-}
-
-.screenshots img {
-  max-width: 500px; 
-  height: auto; 
-}
-
-.screenshotList img {
-  max-width: 300px; 
-  height: auto; 
-}
-
-.kioskButton {
-  background-color: aqua; 
-  border: none;
-  color: black; 
-  padding: 15px 20px; 
-  text-align: center;
-  text-decoration: none; 
-  display: block; 
-  width: 200px; 
-  margin: 20px auto; 
-  font-size: 16px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-}
-
-.link {
-  color: blue
-}
-
-.link:hover {
-  color: aqua
-}
-
-.qrCode {
-  padding-left: 0.5%;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+@layer components {
+  h1 {
+    @apply bg-cyan-500 text-center; 
+    font-family: 'Trebuchet MS'; 
+    font-size: 50px; 
+    padding-left: 0.5%;
   }
-  100% {
-    transform: rotate(360deg);
+  
+  h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #09f;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 100px auto;
+  }
+  
+  .filterBox {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start; /* Aligns the box to the left */
+  }
+  
+  input {
+    outline: auto;
+    margin-left: 0; /* Remove any margin on the input if needed */
+  }
+  
+
+  div {
+    color: black;
+    font-family: 'Trebuchet MS'
+  }
+
+  .header {
+    @apply bg-cyan-500 text-white text-center;
+  }
+
+  .nav-list {
+    font-family: 'Trebuchet MS';
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav-list li {
+    margin: 0;
+  }
+  
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .project-display h2 {
+    font-family: 'Trebuchet MS';
+    font-size: 2rem;
+    color: #333; 
+    margin-bottom: 10px; 
+    text-align: center;
+  }
+  
+  .project-display p {
+    font-family: 'Trebuchet MS';
+    font-size: 1.5rem; 
+    color: #666; 
+    line-height: 1.5; 
+    margin-bottom: 15px; 
+    text-align: center; 
+  }
+  
+  .project-display p.long-desc {
+    font-family: 'Trebuchet MS';
+    font-size: 0.9rem; 
+    color: #444; 
+    white-space: pre-wrap; 
+    overflow-wrap: break-word; 
+  }
+  
+  .screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .screenshotList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .kioskButton {
+    @apply bg-cyan-500; /* Apply Tailwind utility for background color */
+    @apply text-black; /* Apply Tailwind utility for text color */
+    @apply py-4 px-5; /* Padding utilities */
+    @apply text-center; /* Center text */
+    @apply block; /* Make it a block element */
+    @apply w-48; /* Set width */
+    @apply mx-auto; /* Center horizontally */
+    @apply my-5; /* Vertical margin */
+    @apply text-base; /* Font size */
+    @apply rounded; /* Border radius */
+    @apply cursor-pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Custom transition */
+    border: none; /* No border */
+  }
+  
+  .qrCode {
+    padding-left: 0.5%;
+  }
+  
+  .container {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+  .container::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
