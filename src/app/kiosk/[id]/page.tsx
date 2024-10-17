@@ -22,14 +22,14 @@ export async function generateStaticParams() {
   return projects.map(project => ({ id: project.id })); 
 }
 
-const ProjectPage = async ({ params }: { params: { id: string } }) => {
+const KioskPage = async ({ params }: { params: { id: string } }) => {
   const currentProject = await getProjectData(params.id);
 
   if (!currentProject) {
     return <div><p className='my-4'>Project not found.</p></div>;
   }
 
-  const qrValue = currentProject.url;
+  const qrValue = `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/projects/${currentProject.id}`;
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -62,4 +62,4 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
   );
 }
 
-export default ProjectPage;
+export default KioskPage;

@@ -40,7 +40,7 @@ export default function Kiosk() {
   }
 
   const currentProject = projects[currentProjectIndex];
-  const qrValue = currentProject.url;
+  const qrValue = `${window.location.origin}/projects/${currentProject.id}`;
 
   return (
     <div className="bg-gray-100 min-h-screen">
