@@ -23,8 +23,7 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
 
         if (foundProject) {
           setCurrentProject(foundProject);
-          const projectUrl = `${window.location.origin}/projects/${foundProject.id}`;
-          setQrValue(projectUrl); 
+          setQrValue(foundProject.url); 
         } else {
           setError('Project not found'); // Set error if project not found
         }

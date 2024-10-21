@@ -7,10 +7,6 @@ ShowcaseSERL is a public portfolio that displays student-and researcher made pro
 TODO: Add image that helps to understand the project.
 This could be an architectural diagram or a screenshot of the application.
 
-## Architecture Overview (optional)
-
-TODO: Add simple diagram that explains the architecture.
-
 ## How to Use
 
 ### Prerequisites
@@ -18,24 +14,20 @@ TODO: Add simple diagram that explains the architecture.
 All necessary dependencies can be found inside the package.json file, and can be installed with the following command:
 ```bash
 npm install
-# or
-yarn install
 ``` 
 
 ### Build
 
-
-### Test
-
-TODO: Explain how unit- or integreation tests can be executed.
+To build the project in its entirety, run the following command:
+```bash
+npm run build
+```
 
 ### Run
 
 First, run the installation command listed in the "Prerequisites" pragraph. Then, run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 ## License
 
