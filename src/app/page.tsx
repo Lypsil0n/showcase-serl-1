@@ -44,7 +44,7 @@ export default function Home() {
             className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col p-6 h-full" // Set card height
             style={{ minHeight: '300px' }} // Minimum height for uniformity
           >
-            <h2 className="text-xl font-bold mb-2">
+            <h2 className="text-xl font-bold mb-2 hover:text-gray-500">
               <Link href={`/projects/${project.id}`}>
                 {project.title}
               </Link>
@@ -54,7 +54,7 @@ export default function Home() {
             </p>
             <p className="text-sm text-gray-500 mt-1">Type: {project.type}</p>
             <p className="text-sm text-gray-500">Tags: {project.tags.join(", ")}</p>
-            <p className="text-blue-500 mt-2">
+            <p className="text-blue-500 mt-2 hover:text-cyan-500">
               <a href={project.url} target="_blank" rel="noopener noreferrer">
                 Visit Homepage
               </a>

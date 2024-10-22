@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { Project } from '../../types/types';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link'
 
 // Dynamic import for the QRCode component
 const QRCode = dynamic(() => import('qrcode.react').then(mod => mod.QRCodeSVG), { ssr: false });
@@ -12,7 +12,6 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
   const [currentProject, setCurrentProject] = useState<Project | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [qrValue, setQrValue] = useState<string>(''); // Added state for QR value
-  const router = useRouter();
 
   useEffect(() => {
     const fetchProject = () => {
@@ -25,10 +24,10 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
           setCurrentProject(foundProject);
           setQrValue(foundProject.url); 
         } else {
-          setError('Project not found'); // Set error if project not found
+          setError('Project not found.'); // Set error if project not found
         }
       } else {
-        setError('No projects found in local storage'); // Handle case where there are no projects
+        setError('No projects found in local storage.'); // Handle case where there are no projects
       }
     };
 
@@ -36,7 +35,10 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
   }, [params.id]);
 
   if (error) {
-    router.push("/list");
+    return <div>
+      <p className='my-4'>{error}</p>
+      <p className='my-4 hover:text-cyan-500'><a><Link href='/'>Return to Homepage</Link></a></p>
+    </div>
   }
 
   if (!currentProject) {
@@ -46,7 +48,7 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg w-[1100px] h-[950px] mx-auto mt-8 flex flex-col justify-between">
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-2xl font-bold hover:text-gray-500">
           <a href={currentProject.url} target="_blank" rel="noopener noreferrer">
             {currentProject.title}
           </a>

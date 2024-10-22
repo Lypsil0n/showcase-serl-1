@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { Project } from '../../types/types';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link'
 
 // Dynamic import for the QRCode component
 const QRCode = dynamic(() => import('qrcode.react').then(mod => mod.QRCodeSVG), { ssr: false });
@@ -12,7 +12,6 @@ const KioskPage = ({ params }: { params: { id: string } }) => {
   const [currentProject, setCurrentProject] = useState<Project | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [qrValue, setQrValue] = useState<string>('');
-  const router = useRouter();
 
   useEffect(() => {
     const fetchProject = () => {
@@ -27,10 +26,10 @@ const KioskPage = ({ params }: { params: { id: string } }) => {
           console.log('Project URL:', projectUrl);
           setQrValue(projectUrl); // Set the QR value
         } else {
-          setError('Project not found'); 
+          setError('Project not found.'); 
         }
       } else {
-        setError('No projects found in local storage');
+        setError('No projects found in local storage.');
       }
     };
 
@@ -38,7 +37,10 @@ const KioskPage = ({ params }: { params: { id: string } }) => {
   }, [params.id]);
 
   if (error) {
-    router.push("/list");
+    return <div>
+      <p className='my-4'>{error}</p>
+      <p className='my-4 hover:text-cyan-500'><a><Link href='/'>Return to Homepage</Link></a></p>
+    </div>
   }
 
   if (!currentProject) {
