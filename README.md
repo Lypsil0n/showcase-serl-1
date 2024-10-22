@@ -4,8 +4,7 @@
 
 ShowcaseSERL is a public portfolio that displays student-and researcher made projects, mainly made for finished projects to inspire students to contribute their own projects. ShowcaseSERL serves two primary purposes; a web application for browsing projects, as well as a kiosk display to display certain projects in a public setting.
 
-TODO: Add image that helps to understand the project.
-This could be an architectural diagram or a screenshot of the application.
+![App Screenshot](./public/images/screenshot.png)
 
 ## How to Use
 
