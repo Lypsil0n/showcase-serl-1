@@ -1,41 +1,54 @@
 # ShowcaseSERL
 
-ShowcaseSERL is a curated collection of student and researcher- developed projects. It serves as a public portfolio for finished projects and inspires students to contribute their project ideas.
+## Introduction
 
-## Getting Started
+ShowcaseSERL is a public portfolio that displays student-and researcher made projects, mainly made for finished projects to inspire students to contribute their own projects. ShowcaseSERL serves two primary purposes; a web application for browsing projects, as well as a kiosk display to display certain projects in a public setting.
 
-First, run the development server:
+TODO: Add image that helps to understand the project.
+This could be an architectural diagram or a screenshot of the application.
 
+## How to Use
+
+### Prerequisites
+
+All necessary dependencies can be found inside the package.json file, and can be installed with the following command:
+```bash
+npm install
+``` 
+
+### Build
+
+To build the project in its entirety, run the following command:
+```bash
+npm run build
+```
+
+### Run
+
+First, run the installation command listed in the "Prerequisites" pragraph. Then, run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+## License
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+MIT License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copyright © 2024 Samuel Stenfelt
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Development
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-To ensure a consistent code style, this project uses [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/). You can run the following command to check for linting errors and format the code:
-
-```bash
-npm run lint
-npm run format:fix
-```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
