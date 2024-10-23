@@ -7,6 +7,7 @@
         "tags": ["AI", "audio recording", "video recording", "Rust"],
         "screenshots": ["https://screenpi.pe/1024x1024.png", "https://opengraph.githubassets.com/78f5534e5e39cbdb484913b3404aba06cc8de55c01022f557c2af0dd21ef0ae0/mediar-ai/screenpipe"],
         "url": "https://screenpi.pe",
+        "gitUrl": "https://github.com/mediar-ai/screenpipe",
         "type": "Student project"
     },
     {
@@ -17,6 +18,7 @@
         "tags": ["video games", "engine", "C++"],
         "screenshots": ["https://godotengine.org/assets/press/icon_color.png", "https://raw.githubusercontent.com/godotengine/godot-design/master/screenshots/editor_tps_demo_1920x1080.jpg"], 
         "url": "https://godotengine.org",
+        "gitUrl": "https://github.com/godotengine/godot",
         "type": "Student project"
     },
     {
@@ -27,6 +29,7 @@
         "tags": ["framework", "API", "JavaScript"],
         "screenshots": ["https://avatars.githubusercontent.com/u/82193554?v=4", "https://user-images.githubusercontent.com/7828962/211444352-4d6d2e4a-13c9-4980-9e16-4aed4af9811b.png"], 
         "url": "https://www.tooljet.com",
+        "gitUrl": "https://github.com/ToolJet/ToolJet",
         "type": "Research project"
     },
     {
@@ -37,6 +40,7 @@
         "tags": ["AI", "coding assistance", "TypeScript"],
         "screenshots": ["https://docs.continue.dev/img/logo.png", "https://noted.lol/content/images/2023/10/continue-coding-chat-ai-noted.lol-2.png"], 
         "url": "https://www.continue.dev",
+        "gitUrl": "https://github.com/continuedev/continue",
         "type": "Research project"
     },
     {
@@ -47,6 +51,7 @@
         "tags": ["database", "SQL", "Go"],
         "screenshots": ["https://dicedb.io/icon.png", "https://opengraph.githubassets.com/f5837c2216a3655c96f17ab2ae99a9c3c40caf985e4262de67345ec04ac5c957/DiceDB/dice"], 
         "url": "https://dicedb.io",
+        "gitUrl": "https://github.com/DiceDB/dice",
         "type": "Student project"
     },
     {
@@ -57,6 +62,7 @@
         "tags": ["workflow", "SQL", "Java"],
         "screenshots": ["https://media.dev.to/cdn-cgi/image/width=320,height=320,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Forganization%2Fprofile_image%2F5283%2F8d138075-5a4a-47cb-a1e2-c123d4f70af0.png", "https://techcrunch.com/wp-content/uploads/2023/10/Kestra-flow.png"], 
         "url": "https://kestra.io",
+        "gitUrl": "https://github.com/kestra-io/kestra",
         "type": "Student project"
     }
 ]

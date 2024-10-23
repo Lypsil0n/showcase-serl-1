@@ -36,7 +36,7 @@ export default function Home() {
         <p>Welcome to ShowcaseSERL!</p>
         <p>These are the latest projects added to the repository.</p>
       </div>
-       <div className="flex justify-center mt-8"> {/* Center the grid container */}
+       <div className="flex justify-center mt-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {projects.map((project) => (
           <div 
