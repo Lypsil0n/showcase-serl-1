@@ -5,6 +5,7 @@ export interface Project {
   longDesc: string;
   tags: string[];
   screenshots: string[];
-  url: string
+  url: string;
+  gitUrl: string;
   type: string;
 }

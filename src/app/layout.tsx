@@ -12,8 +12,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const [,setProjects] = useState<any[]>([]);
 
   useEffect(() => {
-
-
     const fetchProjects = async () => {
       const response = await fetch('/data/projects_real.json');
       
@@ -34,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <title>ShowcaseSERL</title>
-      <body className="flex flex-col min-h-screen"> {/* Use flexbox and min-height */}
+      <body className="flex flex-col min-h-screen">
         {!isKioskRoute && (
           <>
           <h1 style={headingStyle}>ShowcaseSERL</h1>
@@ -42,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </>
         )}
         <br></br>
-        <main className="flex-grow"> {/* Allow the main content to grow */}
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />

@@ -17,17 +17,17 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
     const fetchProject = () => {
       const storedProjectsString = localStorage.getItem('allProjects'); // Retrieve stored projects
       if (storedProjectsString) {
-        const allProjects: Project[] = JSON.parse(storedProjectsString); // Parse JSON string into an object
+        const allProjects: Project[] = JSON.parse(storedProjectsString); 
         const foundProject = allProjects.find((project) => project.id === params.id); // Find the project by ID
 
         if (foundProject) {
           setCurrentProject(foundProject);
           setQrValue(foundProject.url); 
         } else {
-          setError('Project not found.'); // Set error if project not found
+          setError('Project not found.'); 
         }
       } else {
-        setError('No projects found in local storage.'); // Handle case where there are no projects
+        setError('No projects found in local storage.');
       }
     };
 
@@ -49,7 +49,7 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
     <div className="bg-gray-100 min-h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg w-[1100px] h-[950px] mx-auto mt-8 flex flex-col justify-between">
         <h2 className="text-2xl font-bold hover:text-gray-500">
-          <a href={currentProject.url} target="_blank" rel="noopener noreferrer">
+          <a href={currentProject.gitUrl} target="_blank" rel="noopener noreferrer">
             {currentProject.title}
           </a>
         </h2>
