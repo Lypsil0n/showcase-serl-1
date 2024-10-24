@@ -48,11 +48,19 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg w-[1100px] h-[950px] mx-auto mt-8 flex flex-col justify-between">
-        <h2 className="text-2xl font-bold hover:text-gray-500">
+        <div className='flex justify-center items-center'>
+          <h2 className="text-2xl font-bold">
+              {currentProject.title}
+          </h2>
+        </div>
+
+        <div className="flex justify-center items-center">
           <a href={currentProject.gitUrl} target="_blank" rel="noopener noreferrer">
-            {currentProject.title}
+            <button className="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-400">
+              Visit GitHub Repository
+            </button>
           </a>
-        </h2>
+        </div>
 
         <div className="screenshots flex flex-wrap justify-center mb-4">
           {currentProject.screenshots.slice(1).map((url: string, index: number) => (

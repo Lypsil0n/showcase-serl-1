@@ -10,7 +10,9 @@ ShowcaseSERL is a public portfolio that displays student-and researcher made pro
 
 ### Prerequisites
 
-All necessary dependencies can be found inside the package.json file, and can be installed with the following command:
+First, ensure that you have Node.js installed.
+
+All necessary dependencies can be installed with the following command:
 ```bash
 npm install
 ``` 
@@ -24,7 +26,7 @@ npm run build
 
 ### Run
 
-First, run the installation command listed in the "Prerequisites" pragraph. Then, run the development server:
+First, run the commands listed in the "Prerequisites" and "Build" pragraphs. Then, run the development server:
 ```bash
 npm run dev
 ```

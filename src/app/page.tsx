@@ -21,7 +21,7 @@ export default function Home() {
     fetchProjectsFromLocalStorage();
     setLoading(false);
 
-    const intervalId = setInterval(fetchProjectsFromLocalStorage, 5000);
+    const intervalId = setInterval(fetchProjectsFromLocalStorage, 60000);
 
     return () => clearInterval(intervalId);
   }, []);
