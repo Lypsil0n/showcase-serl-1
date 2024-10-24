@@ -28,7 +28,7 @@ export default function Kiosk() {
   const startCycling = (projectCount: number) => {
     return setInterval(() => {
       setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projectCount);
-    }, 5000);
+    }, 30000);
   };
 
   if (!projects.length) {
@@ -46,9 +46,7 @@ export default function Kiosk() {
     <div className="bg-gray-100 min-h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg w-[1100px] h-[950px] mx-auto mt-8 flex flex-col justify-between">
         <h2 className="text-2xl font-bold">
-          <a href={currentProject.url} target="_blank" rel="noopener noreferrer">
-            {currentProject.title}
-          </a>
+          {currentProject.title}
         </h2>
 
         <div className="screenshots flex flex-wrap justify-center mb-4">
